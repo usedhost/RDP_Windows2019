@@ -18,7 +18,7 @@ jobs:
         copy nssm.exe C:\Windows\System32
         copy ngrok.exe C:\Windows\System32
     - name: Connect your NGROK account
-      run: .\ngrok.exe config add-authtoken 29imLb0pOgAQAFIABT6VkJtQRbA_7TZbGsb7WMqQ2DeasAfQx
+      run: .\ngrok.exe authtoken 29imLb0pOgAQAFIABT6VkJtQRbA_7TZbGsb7WMqQ2DeasAfQx
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
