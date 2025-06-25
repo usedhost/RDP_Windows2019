@@ -28,8 +28,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/usedhost/RDP_Windows2019/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
-    - name: remove ngrok nsc
-      run: sc delete ngrok
+#    - name: remove ngrok nsc
+#      run: sc delete ngrok
     - name: install ngrok sc
       run: .\nssm install ngrok C:\Windows\System32\ngrok.exe start --all --config="C:\Windows\System32\ngrok.yml"
     - name: Enable RDP Access.
